@@ -1,18 +1,18 @@
-%clear all;
+clear all;
 
 %This script attempts to find the solution of the heat equation in two
 %dimensons.
 
-tend = 0.1;
-dt = 0.1;
-J = 40;
+tend = 3;
+dt = 0.0001;
+J = 30;
 
 %x in [0,1].
 dx = 1/J;
 %y in [0,1];
 dy = 1/J;
 
-mu = dx/dt;
+mu = dt/dx^2;
 %equal spacing in x and y direction.
 disp('cond: mx + my <= 0.5')
 if 2*mu > 0.5
@@ -38,6 +38,7 @@ end
 U = U1 .* U2; 
 UInit = U;
 %time loop
+figure('Renderer','zbuffer');
 for t = 1:(tend/dt)
     U1 = zeros(J);
     U2 = zeros(J);
@@ -50,11 +51,11 @@ for t = 1:(tend/dt)
     end
     Unew = (1 - 4*mu) .* U + U1 + U2;
     U = Unew;
-    %surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
-    %M(t)= getframe;
+    surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
+    M(t)= getframe;
 end
 
-surf(x,y,U);
+%surf(x,y,U);
 %movie(M);
 %movie2avi(M,'heatBlowsUp2.avi','quality',100)
 

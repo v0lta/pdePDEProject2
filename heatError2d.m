@@ -1,26 +1,31 @@
+clear all;
 %compute the error of the 2d heat equation in 2d.
 
-mu = 0.1;
+mu = 0.25
 %mu = dx/dt;
 
 
-tend = 3;
+tend = 0.1;
 J = 40;
 
 %x in [0,1].
 dx = 1/J;
 %y in [0,1];
 dy = 1/J;
-dt = dx/mu
+% mu = dt/dx^2;
+dt = mu*dx^2;
+
+steps = ceil(tend/dt)
+
 
 %equal spacing in x and y direction.
-disp('cond: mx + my <= 0.5')
-if 2*mu > 0.5
-    disp ('unstable:')
-    disp (2*mu)
-else
-    disp('stable')
-end
+%disp('cond: mx + my <= 0.5')
+%if 2*mu > 0.5
+%    disp ('unstable:')
+%    disp (2*mu)
+%else
+%    disp('stable')
+%end
 
 
 x = linspace(0,1,J);
@@ -38,7 +43,7 @@ end
 U = U1 .* U2; 
 UInit = U;
 %time loop
-for t = 1:dt:tend
+for t = 1:steps
     elements = 2:J-1;  
     for i = 1:1:J
         %compute the columns where x is const.
@@ -51,6 +56,6 @@ for t = 1:dt:tend
 end
 %compute the exact solution:
 Uex = exactHeat(tend,J);
-Uerror = Uex - U;
-surf(x,y,abs(Uerror));
+Uerror = U - Uex;
+surf(x,y,Uerror);
 norm = max(max(abs(Uerror)))
