@@ -6,6 +6,6 @@ x = linspace(0,1,J);
 y = linspace(0,1,J);
 
 t = tend;
-U = exp(-2*t) .* sin(pi*x)' * sin (pi*y);
+U = exp(-2*pi*t) .* sin(pi*x)' * sin (pi*y);
 %surf(x,y,U);
 end
