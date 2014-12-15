@@ -1,11 +1,13 @@
 clear all;
-%compute the error of the 2d heat equation in 2d.
 
-mu = 0.25;
+%This script attempts to find the solution of the heat equation in two
+%dimensons.
+
+mu = 0.1;
 %mu = dx/dt;
 
-tend = 0.3;
-J = 40;
+tend = 0.2;
+J = 20;
 
 %x in [0,1].
 dx = 1/J;
@@ -14,17 +16,29 @@ dy = 1/J;
 % mu = dt/dx^2;
 dt = mu*dx^2;
 
-steps = ceil(tend/dt)
+steps = ceil(tend/dt);
 
-[x,y] = meshgrid(linspace(0,1,J));
+%equal spacing in x and y direction.
+disp('cond: mx + my <= 0.5')
+if 2*mu > 0.5
+    disp ('unstable:')
+    disp (2*mu)
+else
+    disp('stable')
+end
+
+[x,y] =meshgrid(linspace(0,1,J));
 
 %the boundary conditions are zero (of homogeneous diriclet type).
-%the initial solution is u0(x,y) = sin(pi x) sin(pi y).
-U = sin(pi*x)*sin(pi*y); 
 U1 = zeros(J);
 U2 = zeros(J);
+
+%the initial solution is u0(x,y) = sin(pi x) sin(pi y).
+U = 15*(x - x^2).*(y-y^2).*exp(-50 *((x - 0.5)^2 + (y - 0.5)^2 ));
+
 %time loop
-for t = 1:steps
+figure('Renderer','zbuffer');
+for t = 1:(tend/dt)
     elements = 2:J-1;  
     for i = 1:1:J
         %compute the columns where x is const.
@@ -34,9 +48,8 @@ for t = 1:steps
     end
     Unew = (1 - 4*mu) .* U + U1 + U2;
     U = Unew;
+    surf(x,y,U);        
+    M(t)= getframe;
 end
-%compute the exact solution:
-Uex = exactHeat(tend,J);
-Uerror = U - Uex;
-surf(x,y,Uerror);
-norm = max(max(abs(Uerror)))
+
+

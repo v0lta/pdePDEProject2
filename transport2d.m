@@ -14,20 +14,13 @@ dy = 1/J;
 %equal spacing in x and y direction.
 mu = dx/dt;
 
-x = linspace(0,1,J);
-y = linspace(0,1,J);
+[x,y] = meshgrid(linspace(0,1,J));
 
 %the boundary conditions are zero (of homogeneous diriclet type).
+%the initial solution is u0(x,y) = sin(pi x) sin(pi y).
+U = sin(pi*x).*sin(pi*y);
 U1 = zeros(J);
 U2 = zeros(J);
-
-%the initial solution is u0(x,y) = sin(pi x) sin(pi y).
-for i = 1:1:J
-    U1(:,i) = sin(pi*x);
-    U2(i,:) = sin(pi*y); 
-end
-U = U1 .* U2; 
-UInit = U;
 
 for t = 1:(tend/dt)
     U1 = zeros(J);

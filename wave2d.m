@@ -1,5 +1,4 @@
 clear all;
-
 %This script attemts to find the solution of the wave equation in two
 %dimensions.
 
@@ -14,30 +13,15 @@ dy = 1/J;
 %equal spacing in x and y direction.
 mu = dx/dt;
 
-%check stability!!
-%disp('cond: mx + my <= 0.5')
-%if 2*mu > 0.5
-%    disp ('unstable:')
-%   disp (2*mu)
-%else
-%    disp('stable')
-%end
-
-
-x = linspace(0,1,J);
-y = linspace(0,1,J);
+[x,y] = meshgrid(linspace(0,1,J));
 
 %the boundary conditions are zero (of homogeneous diriclet type).
 U1 = zeros(J);
 U2 = zeros(J);
 
 %the initial solution is u0(x,y) = sin(pi x) sin(pi y).
-for i = 1:1:J
-    U1(:,i) = sin(pi*x);
-    U2(i,:) = sin(pi*y); 
-end
-U = U1 .* U2; 
-UInit = U;
+U = sin(pi*x).*sin(pi*y); 
+
 Uold = U;
 for t = 1:(tend/dt)
     U1 = zeros(J);
