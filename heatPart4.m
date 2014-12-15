@@ -1,7 +1,7 @@
 clear all;
 
 %This script attempts to find the solution of the heat equation in two
-%dimensons.
+%dimensons with the new initial conditions given in part4.
 
 mu = 0.1;
 %mu = dx/dt;
