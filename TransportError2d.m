@@ -3,8 +3,8 @@ clear all;
 %This script attemts to find the solution of the transport equation in two
 %dimensions.
 
-tend = 20;
-dt = 0.1;
+tend = 1;
+dt = 0.01;
 J = 30;
 
 %x in [0,1].
@@ -12,7 +12,7 @@ dx = 1/J;
 %y in [0,1];
 dy = 1/J;
 %equal spacing in x and y direction.
-mu = dx/dt;
+mu = dt/dx;
 
 [x,y] = meshgrid(linspace(0,1,J));
 
@@ -36,11 +36,14 @@ for t = 1:(tend/dt)
     Unew = (1 - 2*mu) .* U + U1 + U2;
     U = Unew;
     Uex = exactTranport(t*dt,J);
-    surf(x,y,Uex); % axis([0 1 0 1 -1 1 -1 1]);
+    Udiff = Uex - Unew;
+    Udiff = sqrt(Udiff.^2);
+    surf(x,y,Udiff); 
+    axis([0 1 0 1 -1 1 -1 1]);
     view(180+45,30)
     M(t)= getframe;
     
-    pause;
+%     pause;
 end
 %compute the exact solution:
 % Uex = exactTranport(tend,J);
