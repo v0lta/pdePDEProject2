@@ -3,7 +3,7 @@ clear all;
 %dimensions.
 
 tend = 20;
-dt = 0.1;
+dt = 0.01;
 J = 20;
 
 %x in [0,1].
@@ -11,7 +11,7 @@ dx = 1/J;
 %y in [0,1];
 dy = 1/J;
 %equal spacing in x and y direction.
-mu = dx/dt;
+mu = dt/dx;
 
 [x,y] = meshgrid(linspace(0,1,J));
 

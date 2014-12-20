@@ -48,4 +48,24 @@ which fits when $v=-1$ and so our solution is
 u(x,y,t)=u_0(x+t,y+t)
 \end{equation}
 
+\section{error analysis of the transport problem}
+
+The truncation error for the upwind scheme with $a=1$ can be found to be
+
+\begin{equation}
+T_j^n = -\frac{1}{2}(1-\nu)\Delta x u_{xx} + ...
+\end{equation}
+Which is forst order in $\Delta x$, and therefor, under constant $\nu$, also first order in $\Delta t$.
+
+We then now that the maximum error $E^n$ at a point in time $n$ is bound by a function of the same order. And this is what we see in figure \ref{errororrrTransport}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=15cm]{errororrrTransport} 
+   \caption{The maximum error at time = 0.1 in function of the tilmestep at a constant $\nu$ of 0.3 }
+   \label{errororrrTransport}
+\end{figure}
+
+
 \end{document}  
+
