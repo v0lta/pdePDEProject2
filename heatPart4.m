@@ -6,8 +6,8 @@ clear all;
 mu = 0.1;
 %mu = dx/dt;
 
-tend = 0.2;
-J = 20;
+tend = 0.001;
+J = 50;
 
 %x in [0,1].
 dx = 1/J;
@@ -33,8 +33,8 @@ end
 U1 = zeros(J);
 U2 = zeros(J);
 
-%the initial solution is u0(x,y) = sin(pi x) sin(pi y).
-U = 15*(x - x^2).*(y-y^2).*exp(-50 *((x - 0.5)^2 + (y - 0.5)^2 ));
+%the initial solution is u0(x,y) = sin(pi x) sin(pi y)
+U = 15*(x - x.^2).*(y-y.^2).*exp(-50 .*((x - 0.5).^2 + (y - 0.5).^2 ));
 
 %time loop
 figure('Renderer','zbuffer');
@@ -48,7 +48,8 @@ for t = 1:(tend/dt)
     end
     Unew = (1 - 4*mu) .* U + U1 + U2;
     U = Unew;
-    surf(x,y,U);        
+    surf(x,y,U); 
+    axis([0 1 0 1 -1 1]);
     M(t)= getframe;
 end
 

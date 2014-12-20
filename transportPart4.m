@@ -21,7 +21,7 @@ steps = ceil(tend/dt);
 
 %the boundary conditions are zero (of homogeneous diriclet type).
 %the initial solution is u0(x,y) = sin(pi x) sin(pi y).
-U = 15*(x - x^2).*(y-y^2).*exp(-50 *((x - 0.5)^2 + (y - 0.5)^2 ));
+U = 15*(x - x.^2).*(y-y.^2).*exp(-50 .*((x - 0.5).^2 + (y - 0.5).^2 ));
 U1 = zeros(J);
 U2 = zeros(J);
 
@@ -38,6 +38,7 @@ for t = 1:(tend/dt)
     Unew = (1 - 2*mu) .* U + U1 + U2;
     U = Unew;
     surf(x,y,U);
+    axis([0 1 0 1 -1 1]);
     view(180+45,30)
     M(t)= getframe;
 end

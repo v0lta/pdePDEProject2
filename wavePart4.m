@@ -5,7 +5,7 @@ clear all;
 mu = 0.01;
 %mu = dx/dt;
 
-tend = 0.2;
+tend = 0.05;
 J = 20;
 
 %x in [0,1].
@@ -21,7 +21,7 @@ steps = ceil(tend/dt);
 
 %the boundary conditions are zero (of homogeneous diriclet type).
 %the initial solution is u0(x,y) = sin(pi x) sin(pi y).
-U = 15*(x - x^2).*(y-y^2).*exp(-50 *((x - 0.5)^2 + (y - 0.5)^2 ));
+U = 15*(x - x.^2).*(y-y.^2).*exp(-50 .*((x - 0.5).^2 + (y - 0.5).^2 ));
 U1 = zeros(J);
 U2 = zeros(J);
 
@@ -39,9 +39,12 @@ for t = 1:(tend/dt)
     Unew = (2 - 4*mu) .* U - Uold + U1 + U2;
     Uold = U;
     U = Unew;
+    surf(x,y,U);
+    axis([0 1 0 1 -1 1]);
+    M(t)= getframe;
 end
 
-surf(x,y,U);
+movie2avi(M,'wavePretty.avi','quality',100)
      
         
         
