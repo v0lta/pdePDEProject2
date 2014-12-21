@@ -33,9 +33,9 @@ U_{r,s}^{n+1} = U_{r,s}(2 - 2\mu_x - 2 \mu_y) - U_{r,s}^{n-1} \\
 				 + \mu_x U_{r-1,s}^n + \mu_x U_{r+1,s}^n	  \\
 				 + \mu_y U_{r,s-1}^n + \mu_y U_{r,s+1}.
 \end{align*}
-With $\mu_x = \frac{(\triangle t)^2}{(\triangle x)^2} $ and $\mu_y = \frac{(\triangle t)^2}{(\triangle y)^2} $. In comparison to listing~\ref{lst:expHeat} we only have to change the for loop to implement this scheme. We got:
+With $\mu_x = \frac{(\triangle t)^2}{(\triangle x)^2} $ and $\mu_y = \frac{(\triangle t)^2}{(\triangle y)^2} $. In comparison to listing~\ref{lst:expHeat} when listing only changes to the for loop. We got:
 \lstinputlisting[language=matlab,caption={Code for solving the wave equation.},label=lst:expWave,captionpos=b]{code/waveFor.tex}
-
+Obviously different initial parameters will have to be chosen here.
 
 
 \subsection{Transport equation}
@@ -52,6 +52,7 @@ With $\mu_x = \frac{\triangle t}{\triangle x} $ and $\mu_y = \frac{\triangle t}{
 
 
 \section{Analysis}
+\subsection{Stability}
 Figure~\ref{fig:stableUnstable} shows stable and unstable solutions for the three equations. We will proceed with taking a close look at the numerical properties of the methods we described so far. 
 \begin{figure}
 \includegraphics[scale = 0.33]{images/heat.png}
@@ -59,19 +60,27 @@ Figure~\ref{fig:stableUnstable} shows stable and unstable solutions for the thre
 \includegraphics[scale = 0.33]{images/transport.png}
 \includegraphics[scale = 0.33]{images/heatUnstable.png}
 \includegraphics[scale = 0.33]{images/waveUnstable.png}
-\includegraphics[scale = 0.33]{images/t0p15dt0p1J30.png}
+\includegraphics[scale = 0.33]{images/transportUnstable.png}
 \caption{Numerical solutions computed using the schemes described above for stable (top row) and unstable (bottom row) grid ratios $\mu$.}
 \label{fig:stableUnstable}
 \end{figure}
-For the heat equation stable solutions have to satisfy the condition:
+In order to obtain stable solutions in two dimensions we have to satisfy the condition:
 \begin{equation}
-\mu_x + \mu_y = 0.5
+\mu_x + \mu_y \leq 0.5
 \end{equation}
-%Which is the case for the solution in figure~\ref{fig:stableUnstable} in the top left where we have $\mu = 0.25 = \mu_x = \mu_y$ at $t=1$. However to compute the image in the bottom left we used a grid ratio of $\mu = 0.252$ and we observe instability at the same point in time. 
+For equally spaced with $\mu_x = \mu_y = \mu$ grids we get:
+\begin{equation}
+\mu \leq 0.25
+\end{equation}
+Where $\mu_x$ and $\mu_y$ are different for every method, as derived in the previous section. For the following computations we kept $J=30$, defined $\triangle x = \triangle y = 1/J$ and computed $dt$ from mu. For the heat equation for the solution in figure~\ref{fig:stableUnstable} in the top left is stable here we have $\mu = 0.25 = \mu_x = \mu_y$ at $t=1$. However to compute the image in the bottom left we used a grid ratio of $\mu = 0.252$ and we observe instability at the same point in time. The solution of the wave equation is shown in the top middle position for time t=1 with $\mu = 0.25$. We found the wave equation to be surprisingly stable. In our computations first instabilities appeared at time $t = 10$ with a grid ratio of $\mu = 0.51$. The transport problem also turned out to be more stable then the heat equation. In the top right corner of figure~\ref{fig:stableUnstable} we show the solution of the transport equation for the given initial condition at time $0.5$. First instabilities at this time appeared with a grid ratio of $\mu = 0.6$, which are shown below.
 
 
 
-\subsection{Transport Equation}
+\subsection{Accuracy}
+\subsubsection{Exact Solution of the Heat Equation}
+
+
+
 \subsubsection{Exact Solution of Transport Equation}
 As a solution for the transport equation of form
 
@@ -128,7 +137,7 @@ Finally we are going to compute the solutions again with the initial solution:
 \begin{equation}
 u_0(x,y) = 15(x-x^2)(y - y^2) e^{-50(x-0.5)^2 + (y-0.5)^2}
 \end{equation}
-Figure~\ref*{fig:part4} shows the results.\footnote{For solution of the wave equation, which we found exepctionally pretty a video may be downloaded from: \url{https://www.youtube.com/watch?v=gE13nlbE5ug&feature=youtu.be}}. 
+Figure~\ref*{fig:part4} shows the results.\footnote{For solution of the wave equation, which we found exepctionally pretty a video may be downloaded from: \url{https://www.youtube.com/watch?v=gE13nlbE5ug&feature=youtu.be}}. It is important to note that the solution of the heat equation disappears extremely quickly. The maximum is of scale $10^{-2}$ at time $t = 0.1$ and decreases to $10^{-3}$ at $t=0.2$.
 
 \begin{figure}
 \includegraphics[scale=0.33]{images/heatP4T01.png}
@@ -137,7 +146,7 @@ Figure~\ref*{fig:part4} shows the results.\footnote{For solution of the wave equ
 \includegraphics[scale=0.33]{images/heatP4T02.png}
 \includegraphics[scale=0.33]{images/waveP4T02.png}
 \includegraphics[scale=0.33]{images/transpP4T02.png}
-\caption{The tree equations with $\mu_x=\mu_y= 0.1$. The heat and wave equation in the first and second column are shown at $t=0.1$ and $t=0.2$. The transport equation solutions in column three are shown at $t = 0.001$ and $t = 0.002$. }
+\caption{The tree equations with $\mu_x=\mu_y= 0.1$ at $t = 0.1$ (top row) and $t = 0.2$ (bottom row). }
 \label{fig:part4}
 \end{figure}
 

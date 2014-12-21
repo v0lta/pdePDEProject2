@@ -9,6 +9,8 @@ mu = dt/dx^2;
 [x,y] = meshgrid(linspace(0,1,J));
 %Initial solution.
 U = sin(pi*x).*sin(pi*y); 
+U1 = zeros(J);
+U2 = zeros(J);
 for t = 1:(tend/dt)
     elements = 2:J-1;  
     for i = 1:1:J
