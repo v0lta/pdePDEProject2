@@ -19,7 +19,7 @@ with b = 1 in our case. By expanding the central differences we arrive at:
 U_{r,x}^{n+1} = U_{r,s}^n (1 - 2\mu_x - 2\mu_y) + \mu_x U_{r+1,s}^n + \mu_x U_{r-1,s}^n + \mu_y U_{r,s+1}^n + \mu_y U_{r,s-1}^n.
 \label{eq:heat}
 \end{equation}
-Equation~\ref{eq:heat} my be implemented in matlab.  As we are using a symmetric grid we have $\mu_x = \mu_y$ which leads to the implementation in listing~\ref{lst:expHeat}: 
+Equation~\ref{eq:heat} my be implemented in matlab. With $\mu_x = \frac{\triangle t}{(\triangle x)^2}$ and $\mu_y = \frac{\triangle t}{(\triangle y)^2}$. As we are using a symmetric grid we have $\mu_x = \mu_y$ which leads to the implementation in listing~\ref{lst:expHeat}: 
 \lstinputlisting[language=matlab,caption={Explicit solution of the heat equation in two dimensions.},label=lst:expHeat,captionpos=b]{code/heat2d.tex}
 
 \subsection{Wave equation}
@@ -33,7 +33,7 @@ U_{r,s}^{n+1} = U_{r,s}(2 - 2\mu_x - 2 \mu_y) - U_{r,s}^{n-1} \\
 				 + \mu_x U_{r-1,s}^n + \mu_x U_{r+1,s}^n	  \\
 				 + \mu_y U_{r,s-1}^n + \mu_y U_{r,s+1}.
 \end{align*}
-In comparison to listing~\ref{lst:expHeat} we only have to change the for loop to implement this scheme. We got:
+With $\mu_x = \frac{(\triangle t)^2}{(\triangle x)^2} $ and $\mu_y = \frac{(\triangle t)^2}{(\triangle y)^2} $. In comparison to listing~\ref{lst:expHeat} we only have to change the for loop to implement this scheme. We got:
 \lstinputlisting[language=matlab,caption={Code for solving the wave equation.},label=lst:expWave,captionpos=b]{code/waveFor.tex}
 
 
@@ -47,7 +47,7 @@ Using exclusively forward differences to approximate the first order differentia
 \begin{equation}
 U_{r,s}^{n+1} = U_{r,s}^n (1 - \mu_x - \mu_y) + \mu_x U_{r+1,s} + \mu_y U_{r,s+1}.
 \end{equation}
-Which leads to the modified for-loop for the transport case:
+With $\mu_x = \frac{\triangle t}{\triangle x} $ and $\mu_y = \frac{\triangle t}{\triangle y} $ .Which leads to the modified for-loop for the transport case:
 \lstinputlisting[language=matlab,caption={Code for solving the two dimesional transport equation.},label=lst:expWave,captionpos=b]{code/transportFor.tex}
 
 
@@ -67,7 +67,7 @@ For the heat equation stable solutions have to satisfy the condition:
 \begin{equation}
 \mu_x + \mu_y = 0.5
 \end{equation}
-Which is the case for the solution in figure~\ref{fig:stableUnstable} in the top left where we have $\mu = 0.25 = \mu_x = \mu_y$ at $t=1$. However to compute the image in the bottom left we used a grid ratio of $\mu = 0.252$ and we observe instability at the same point in time. 
+%Which is the case for the solution in figure~\ref{fig:stableUnstable} in the top left where we have $\mu = 0.25 = \mu_x = \mu_y$ at $t=1$. However to compute the image in the bottom left we used a grid ratio of $\mu = 0.252$ and we observe instability at the same point in time. 
 
 
 
