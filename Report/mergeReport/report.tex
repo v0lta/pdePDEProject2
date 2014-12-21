@@ -1,0 +1,56 @@
+\documentclass[ twoside,openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
+                footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
+                BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
+                ngerman,american,%
+                ]{scrreprt}
+
+
+%load fonts und useful packages. etc.
+\input{config}
+\begin{document}
+\frenchspacing
+\raggedbottom
+\selectlanguage{american} % american ngerman
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+\pagenumbering{roman}
+\pagestyle{plain}
+%create titelpage
+\include{FrontBackmatter/Titlepage}
+%\include{FrontBackmatter/Contents}
+\pagestyle{scrheadings}
+
+
+\pagenumbering{arabic}
+
+\chapter{Implementation of explicit methods}
+In this report we are going to implement explicit methods to solve three different partial differential equations in two dimensions.
+\section{Heat Equation}
+We will begin with the numerical solution of the heat equation:
+\begin{equation}
+\frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}
+\end{equation}
+From the lecture we know that this problem may be solved by extension of the one dimensional explicit scheme:
+\begin{equation}
+\frac{U^{n+1}-U^{n}}{\triangle t} = b [\frac{\delta_x^2 U^n}{(\triangle x)^2} + \frac{\delta_y^2 U^n}{(\triangle y)^2} ]
+\end{equation}
+with b = 1 in our case. By expanding the central differences we arrive at:
+\begin{equation}
+U_{r,x}^{n+1} = U_{r,s}^n (1 - 2\mu_x - 2\mu_y) + \mu_x U_{r+1,s}^n + \mu_x U_{r-1,s}^n + \mu_y U_{r,s+1}^n + \mu_y U_{r,s-1}^n.
+\label{eq:heat}
+\end{equation}
+Equation~\ref{eq:heat} my be implemented in matlab.  As we are using a symmetric grid we have $\mu_x = \mu_y$ which leads to the implementation in listing~\ref{eq:heat}: 
+\lstinputlisting[language=matlab,caption={explicit solution of the heat equation in two dimensions},label=lst:expHeat,captionpos=b]{code/heat2d.tex}
+
+
+\section{Wave equation}
+
+\section{Transport equation}
+
+\chapter{Analysis}
+\section{Accuracy}
+
+\section{Another initial solution}
+
+
+\end{document}
