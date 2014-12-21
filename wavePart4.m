@@ -2,10 +2,10 @@ clear all;
 %This script attemts to find the solution of the wave equation in two
 %dimensions, with the boundary conditions given in part 4.
 
-mu = 0.01;
+mu = 0.1;
 %mu = dx/dt;
 
-tend = 0.05;
+tend = 0.1;
 J = 20;
 
 %x in [0,1].
@@ -13,7 +13,7 @@ dx = 1/J;
 %y in [0,1];
 dy = 1/J;
 % mu = dt/dx^2;
-dt = mu*dx^2;
+dt = sqrt(mu*dx^2);
 
 steps = ceil(tend/dt);
 
@@ -39,12 +39,13 @@ for t = 1:(tend/dt)
     Unew = (2 - 4*mu) .* U - Uold + U1 + U2;
     Uold = U;
     U = Unew;
-    surf(x,y,U);
-    axis([0 1 0 1 -1 1]);
-    M(t)= getframe;
+    %surf(x,y,U);
+    %axis([0 1 0 1 -1 1]);
+    %M(t)= getframe;
 end
 
-movie2avi(M,'wavePretty.avi','quality',100)
+surf(x,y,U); %axis([0 1 0 1 -1 1 -1 1]);
+%movie2avi(M,'wavePretty.avi','quality',100)
      
         
         

@@ -2,18 +2,18 @@ clear all;
 %Find the error of the wave Equation.
 
 
-mu = 0.00
+mu = 0.25
 %mu = dx/dt;
 
-tend = 0.1;
-J = 40;
+tend = 1;
+J = 30;
 
 %x in [0,1].
 dx = 1/J;
 %y in [0,1];
 dy = 1/J;
 % mu = dt/dx^2;
-dt = mu*dx^2;
+dt = sqrt(mu*dx^2);
 
 [x,y] = meshgrid(linspace(0,1,J));
 
@@ -51,5 +51,5 @@ for t = 1:steps
 end
 Uex = exactWave(tend,J);
 Uerror = U - Uex;
-surf(x,y,Uerror);
+surf(x,y,U);
 maxVal = max(max(abs(Uerror)))

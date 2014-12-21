@@ -6,16 +6,16 @@ mu = 0.1;
 %mu = dx/dt;
 
 tend = 0.2;
-J = 20;
+J = 50;
 
 %x in [0,1].
 dx = 1/J;
 %y in [0,1];
 dy = 1/J;
 % mu = dt/dx^2;
-dt = mu*dx^2;
+dt = mu*dx;
 
-steps = ceil(tend/dt);
+steps = ceil(tend/dt)
 
 [x,y] = meshgrid(linspace(0,1,J));
 
@@ -38,10 +38,14 @@ for t = 1:(tend/dt)
     Unew = (1 - 2*mu) .* U + U1 + U2;
     U = Unew;
     surf(x,y,U);
-    axis([0 1 0 1 -1 1]);
-    view(180+45,30)
-    M(t)= getframe;
+    %axis([0 1 0 1 -1 1]);
+    %view(180+45,30)
+    %M(t)= getframe;
 end
 
+surf(x,y,U);
+axis([0 1 0 1 -1 1]);
+view(180+45,30)
+    
 %movie(M);
 %movie2avi(M,'transport2.avi','quality',100)

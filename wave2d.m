@@ -2,16 +2,16 @@ clear all;
 %This script attemts to find the solution of the wave equation in two
 %dimensions.
 
-tend = 20;
-dt = 0.001;
-J = 20;
+tend = 0.1;
+dt = 0.00033;
+J = 40;
 
 %x in [0,1].
 dx = 1/J;
 %y in [0,1];
 dy = 1/J;
 %equal spacing in x and y direction.
-mu = dt/dx^2;
+mu = dt^2/dx^2
 
 [x,y] = meshgrid(linspace(0,1,J));
 
@@ -23,9 +23,8 @@ U2 = zeros(J);
 U = sin(pi*x).*sin(pi*y); 
 
 Uold = U;
+%figure('Renderer','zbuffer');
 for t = 1:(tend/dt)
-    U1 = zeros(J);
-    U2 = zeros(J);
     elements = 2:J-1;  
     for i = 1:1:J
         %compute the columns where x is const.
@@ -36,13 +35,13 @@ for t = 1:(tend/dt)
     Unew = (2 - 4*mu) .* U - Uold + U1 + U2;
     Uold = U;
     U = Unew;
-    surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
-    M(t)= getframe;
+    %surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
+    %M(t)= getframe;
 end
 
 %movie(M);
 %movie2avi(M,'wave.avi','quality',100)
-     
+surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);     
         
         
         

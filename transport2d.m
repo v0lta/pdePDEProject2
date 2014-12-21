@@ -3,7 +3,7 @@ clear all;
 %This script attemts to find the solution of the transport equation in two
 %dimensions.
 
-tend = 0.1;
+tend = 0.007;
 dt = 0.0001; %0.01
 J = 30; %30
 
@@ -12,7 +12,7 @@ dx = 1/J;
 %y in [0,1];
 dy = 1/J;
 %equal spacing in x and y direction.
-mu = dt/dx^2;
+mu = dt/dx;
 
 [x,y] = meshgrid(linspace(0,1,J));
 
@@ -32,10 +32,13 @@ for t = 1:(tend/dt)
     end
     Unew = (1 - 2*mu) .* U + U1 + U2;
     U = Unew;
-    surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
-    view(180+45,30)
-    M(t)= getframe;
+    %surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
+    %view(180+45,30)
+    %M(t)= getframe;
 end
 
 %movie(M);
 %movie2avi(M,'transport2.avi','quality',100)
+surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
+view(180+45,30)
+    

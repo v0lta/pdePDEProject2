@@ -4,15 +4,15 @@ clear all;
 mu = 0.25;
 %mu = dx/dt;
 
-tend = 0.3;
-J = 40;
+tend = 1;
+J = 30;
 
 %x in [0,1].
 dx = 1/J;
 %y in [0,1];
 dy = 1/J;
 % mu = dt/dx^2;
-dt = mu*dx^2;
+dt = mu*dx^2
 
 steps = ceil(tend/dt)
 
@@ -20,7 +20,7 @@ steps = ceil(tend/dt)
 
 %the boundary conditions are zero (of homogeneous diriclet type).
 %the initial solution is u0(x,y) = sin(pi x) sin(pi y).
-U = sin(pi*x)*sin(pi*y); 
+U = sin(pi*x).*sin(pi*y); 
 U1 = zeros(J);
 U2 = zeros(J);
 %time loop
@@ -38,5 +38,5 @@ end
 %compute the exact solution:
 Uex = exactHeat(tend,J);
 Uerror = U - Uex;
-surf(x,y,Uerror);
+surf(x,y,U);
 maxVal = max(max(abs(Uerror)))
