@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.11)  21 DEC 2014 13:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.11)  21 DEC 2014 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1554,7 +1554,11 @@ Package: scrtime 2011/03/31 v3.08b KOMA-Script package (time of LaTeX run)
 Package: prelim2e 2009/05/29 v1.3 prelim2e Package (MS)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/carlisle/remreset.sty))) (./report.aux
-(./FrontBackmatter/Titlepage.aux))
+(./FrontBackmatter/Titlepage.aux)
+
+LaTeX Warning: Label `lst:expWave' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -1571,8 +1575,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 10.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 10.
@@ -1939,16 +1942,255 @@ Package xcolor Warning: Incompatible color definition on input line 23.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 9.30756pt on input line 43.
- [2]
-Chapter 2.
-[3
+
+
+Package xcolor Warning: Incompatible color definition on input line 56.
+
+(./code/waveFor.tex
+
+Package xcolor Warning: Incompatible color definition on input line 1.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 8.
+
+
+Package xcolor Warning: Incompatible color definition on input line 12.
+
+) [2] (./code/transportFor.tex
+
+Package xcolor Warning: Incompatible color definition on input line 2.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 7.
+
+) [3] [4
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
- (./report.aux (./FrontBackmatter/Titlepage.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
+Chapter 2.
+LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 117.
+
+LaTeX Warning: Reference `errororrrTransport' on page 5 undefined on input line
+ 117.
+
+<images/errororrrTransport.png, id=124, 786.94pt x 476.78125pt>
+File: images/errororrrTransport.png Graphic file (type png)
+
+<use images/errororrrTransport.png>
+Package pdftex.def Info: images/errororrrTransport.png used on input line 121.
+(pdftex.def)             Requested size: 426.79134pt x 258.5784pt.
+
+Overfull \hbox (90.79134pt too wide) in paragraph at lines 121--122
+ [][] 
+ []
+
+[5] [6 <./images/errororrrTransport.png (PNG copy)>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
+ (./report.aux
+(./FrontBackmatter/Titlepage.aux)
+
+Package mparhack Warning: Marginpars may have changed.
+(mparhack)                Rerun to get them right.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
 
 
  *File List*
@@ -2134,21 +2376,36 @@ FrontBackmatter/logo_kuleuven.png
 lstlang1.sty    2013/08/26 1.5b listings language file
    t1fvm.fd    2004/09/07 scalable font definitions for T1/fvm.
 code/heat2d.tex
+code/waveFor.tex
+code/transportFor.tex
+images/errororrrTransport.png
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 59CFEC58DD24DC2E1D6DBEA43C125798;440.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
+
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: 59CFEC58DD24DC2E1D6DBEA43C125798;440
+(rerunfilecheck)             After:  0ED63E42AC4430B3E63C9A60DC01D3DD;557.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 33160 strings out of 494976
- 671406 string characters out of 6179136
- 1002010 words of memory out of 5000000
- 35574 multiletter control sequences out of 15000+600000
- 65230 words of font info for 92 fonts, out of 8000000 for 9000
+ 33243 strings out of 494976
+ 672693 string characters out of 6179136
+ 1006126 words of memory out of 5000000
+ 35605 multiletter control sequences out of 15000+600000
+ 68746 words of font info for 98 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 68i,13n,122p,755b,2559s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,14n,122p,755b,2559s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-d
@@ -2158,12 +2415,12 @@ ts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera
 /fvmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont
-/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pf
-b>
-Output written on report.pdf (4 pages, 70961 bytes).
+/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on report.pdf (7 pages, 104029 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 12362 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 201 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 12879 words of extra memory for PDF output out of 14400 (max. 10000000)
 

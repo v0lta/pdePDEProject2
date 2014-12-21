@@ -1,0 +1,9 @@
+    elements = 2:J-1;  
+    for i = 1:1:J
+        %compute the columns where x is const.
+        U1(elements,i) = mu*U(elements+1,i); 
+        %compute the columns where y is const.
+        U2(i,elements) = mu*U(i,elements+1);
+    end
+    Unew = (1 - 2*mu) .* U + U1 + U2;
+    U = Unew;

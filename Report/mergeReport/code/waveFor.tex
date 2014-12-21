@@ -1,0 +1,12 @@
+for t = 1:(tend/dt)
+    elements = 2:J-1;  
+    for i = 1:1:J
+        %compute the columns where x is const.
+        U1(elements,i) = mu*U(elements+1,i) + mu*U(elements-1,i); 
+        %compute the columns where y is const.
+        U2(i,elements) = mu*U(i,elements+1) + mu*U(i,elements-1);
+    end
+    Unew = (2 - 4*mu) .* U - Uold + U1 + U2;
+    Uold = U;
+    U = Unew;
+end
