@@ -60,11 +60,14 @@ Figure~\ref{fig:stableUnstable} shows stable and unstable solutions for the thre
 \includegraphics[scale = 0.33]{images/heatUnstable.png}
 \includegraphics[scale = 0.33]{images/waveUnstable.png}
 \includegraphics[scale = 0.33]{images/t0p15dt0p1J30.png}
-\caption{Numerical solutions computed using the schemes described above for stable (top row) and unstable (bottom row) grid ratios.}
+\caption{Numerical solutions computed using the schemes described above for stable (top row) and unstable (bottom row) grid ratios $\mu$.}
 \label{fig:stableUnstable}
 \end{figure}
-
-
+For the heat equation stable solutions have to satisfy the condition:
+\begin{equation}
+\mu_x + \mu_y = 0.5
+\end{equation}
+Which is the case for the solution in figure~\ref{fig:stableUnstable} in the top left where we have $\mu = 0.25 = \mu_x = \mu_y$ at $t=1$. However to compute the image in the bottom left we used a grid ratio of $\mu = 0.252$ and we observe instability at the same point in time. 
 
 
 
@@ -112,7 +115,7 @@ We then now that the maximum error $E^n$ at a point in time $n$ is bound by a fu
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=15cm]{images/errororrrTransport} 
+   \includegraphics[scale=0.3]{images/errororrrTransport} 
    \caption{The maximum error at time = 0.1 in function of the tilmestep at a constant $\nu$ of 0.3 }
    \label{errororrrTransport}
 \end{figure}
@@ -121,6 +124,21 @@ We then now that the maximum error $E^n$ at a point in time $n$ is bound by a fu
 
 
 \section{Another initial solution}
+Finally we are going to compute the solutions again with the initial solution:
+\begin{equation}
+u_0(x,y) = 15(x-x^2)(y - y^2) e^{-50(x-0.5)^2 + (y-0.5)^2}
+\end{equation}
+Figure~\ref*{fig:part4} shows the results.\footnote{For solution of the wave equation, which we found exepctionally pretty a video may be downloaded from: \url{https://www.youtube.com/watch?v=gE13nlbE5ug&feature=youtu.be}}. 
 
+\begin{figure}
+\includegraphics[scale=0.33]{images/heatP4T01.png}
+\includegraphics[scale=0.33]{images/waveP4T01.png}
+\includegraphics[scale=0.33]{images/transpP4T01.png}
+\includegraphics[scale=0.33]{images/heatP4T02.png}
+\includegraphics[scale=0.33]{images/waveP4T02.png}
+\includegraphics[scale=0.33]{images/transpP4T02.png}
+\caption{The tree equations with $\mu_x=\mu_y= 0.1$. The heat and wave equation in the first and second column are shown at $t=0.1$ and $t=0.2$. The transport equation solutions in column three are shown at $t = 0.001$ and $t = 0.002$. }
+\label{fig:part4}
+\end{figure}
 
 \end{document}
