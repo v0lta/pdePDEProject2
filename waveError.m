@@ -1,19 +1,24 @@
 clear all;
-%This script attemts to find the solution of the wave equation in two
-%dimensions.
+%Find the error of the wave Equation.
 
-tend = 20;
-dt = 0.001;
-J = 20;
+
+mu = 0.00
+%mu = dx/dt;
+
+tend = 0.1;
+J = 40;
 
 %x in [0,1].
 dx = 1/J;
 %y in [0,1];
 dy = 1/J;
-%equal spacing in x and y direction.
-mu = dt/dx^2;
+% mu = dt/dx^2;
+dt = mu*dx^2;
 
 [x,y] = meshgrid(linspace(0,1,J));
+
+
+steps = ceil(tend/dt)
 
 %the boundary conditions are zero (of homogeneous diriclet type).
 U1 = zeros(J);
@@ -23,7 +28,8 @@ U2 = zeros(J);
 U = sin(pi*x).*sin(pi*y); 
 
 Uold = U;
-for t = 1:(tend/dt)
+figure('Renderer','zbuffer');
+for t = 1:steps
     U1 = zeros(J);
     U2 = zeros(J);
     elements = 2:J-1;  
@@ -36,15 +42,14 @@ for t = 1:(tend/dt)
     Unew = (2 - 4*mu) .* U - Uold + U1 + U2;
     Uold = U;
     U = Unew;
-    surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
-    M(t)= getframe;
+    
+    %tcurr = t*dt;
+    %Uex = exactWave(tcurr,J); 
+    %surf(x,y,Uex);
+    %axis([0 1 0 1 -1 1 -1 1]);
+    %1M(t)= getframe;
 end
-
-%movie(M);
-%movie2avi(M,'wave.avi','quality',100)
-     
-        
-        
-        
-        
-        
+Uex = exactWave(tend,J);
+Uerror = U - Uex;
+surf(x,y,Uerror);
+maxVal = max(max(abs(Uerror)))
