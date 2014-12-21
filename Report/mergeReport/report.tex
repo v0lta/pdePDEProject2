@@ -4,7 +4,7 @@
 \maketitle
 
 \section{Implementation of explicit methods}
-In this report we are going to implement explicit methods to solve three different partial differential equations in two dimensions.
+In this report we are going to implement explicit methods to solve three different partial differential equations in two dimensions and analyze the results.
 \subsection{Heat Equation}
 We will begin with the numerical solution of the heat equation:
 \begin{equation}
@@ -78,9 +78,17 @@ Where $\mu_x$ and $\mu_y$ are different for every method, as derived in the prev
 
 \subsection{Accuracy}
 \subsubsection{Exact Solution of the Heat Equation}
-
-
-
+By using the ansatz $u = T(t)Y(y)X(x)$ followed by separation of variables and using the initial conditions we arrived at the exact solution:
+\begin{equation}
+U(x,y,t) = e^{-2\pi^2 t}sin(\pi x)sin(\pi y).
+\end{equation}
+Which indeed satisfies the differential equation.
+\subsubsection{Exact Solution of the Wave Equation}
+Again using the same Idea we propose the solution:
+\begin{equation}
+u(x,y,t) = cos(\sqrt{2}\pi t)sin(\pi x)sin(\pi y).
+\end{equation}
+which indeed satisfies the partial differential equation.
 \subsubsection{Exact Solution of Transport Equation}
 As a solution for the transport equation of form
 
@@ -110,6 +118,12 @@ which fits when $v=-1$ and so our solution is
 \begin{equation}
 u(x,y,t)=u_0(x+t,y+t)
 \end{equation}
+
+\subsection{Error analysis of our scheme for the heat equation}
+TODO...
+\subsection{Error analysis of our scheme the wave equation}
+TODO...
+
 
 \subsubsection{Error analysis of the transport problem}
 
