@@ -52,12 +52,24 @@ Which leads to the modified for-loop for the transport case:
 
 
 \section{Analysis}
+Figure~\ref{fig:stableUnstable} shows stable and unstable solutions for the three equations. We will proceed with taking a close look at the numerical properties of the methods we described so far. 
+\begin{figure}
+\includegraphics[scale = 0.33]{images/heat.png}
+\includegraphics[scale = 0.33]{images/wave.png}
+\includegraphics[scale = 0.33]{images/transport.png}
+\includegraphics[scale = 0.33]{images/heatUnstable.png}
+\includegraphics[scale = 0.33]{images/waveUnstable.png}
+\includegraphics[scale = 0.33]{images/t0p15dt0p1J30.png}
+\caption{Numerical solutions computed using the schemes described above for stable (top row) and unstable (bottom row) grid ratios.}
+\label{fig:stableUnstable}
+\end{figure}
 
 
 
 
 
-\section{Exact Solution of Transport Equation}
+\subsection{Transport Equation}
+\subsubsection{Exact Solution of Transport Equation}
 As a solution for the transport equation of form
 
 \begin{equation}
@@ -87,7 +99,7 @@ which fits when $v=-1$ and so our solution is
 u(x,y,t)=u_0(x+t,y+t)
 \end{equation}
 
-\section{error analysis of the transport problem}
+\subsubsection{Error analysis of the transport problem}
 
 The truncation error for the upwind scheme with $a=1$ can be found to be
 
