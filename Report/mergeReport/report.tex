@@ -1,31 +1,11 @@
-\documentclass[ twoside,openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
-                footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
-                BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
-                ngerman,american,%
-                ]{scrreprt}
 
-
-%load fonts und useful packages. etc.
-\input{config}
+\input{config.tex}
 \begin{document}
-\frenchspacing
-\raggedbottom
-\selectlanguage{american} % american ngerman
-%\renewcommand*{\bibname}{new name}
-%\setbibpreamble{}
-\pagenumbering{roman}
-\pagestyle{plain}
-%create titelpage
-\include{FrontBackmatter/Titlepage}
-%\include{FrontBackmatter/Contents}
-\pagestyle{scrheadings}
+\maketitle
 
-
-\pagenumbering{arabic}
-
-\chapter{Implementation of explicit methods}
+\section{Implementation of explicit methods}
 In this report we are going to implement explicit methods to solve three different partial differential equations in two dimensions.
-\section{Heat Equation}
+\subsection{Heat Equation}
 We will begin with the numerical solution of the heat equation:
 \begin{equation}
 \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}.
@@ -42,7 +22,7 @@ U_{r,x}^{n+1} = U_{r,s}^n (1 - 2\mu_x - 2\mu_y) + \mu_x U_{r+1,s}^n + \mu_x U_{r
 Equation~\ref{eq:heat} my be implemented in matlab.  As we are using a symmetric grid we have $\mu_x = \mu_y$ which leads to the implementation in listing~\ref{lst:expHeat}: 
 \lstinputlisting[language=matlab,caption={Explicit solution of the heat equation in two dimensions.},label=lst:expHeat,captionpos=b]{code/heat2d.tex}
 
-\section{Wave equation}
+\subsection{Wave equation}
 Next we are going to implement an explicit scheme to solve the wave equation:
 \begin{equation}
 \frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}.
@@ -58,7 +38,7 @@ In comparison to listing~\ref{lst:expHeat} we only have to change the for loop t
 
 
 
-\section{Transport equation}
+\subsection{Transport equation}
 Before we are going to consider the numerical stability and accuracy of these methods we will implement a final scheme to solve the transport equation:
 \begin{equation}
 \frac{\partial u}{\partial t} = \frac{\partial u}{\partial x} + \frac{\partial u}{\partial y}.
@@ -71,7 +51,11 @@ Which leads to the modified for-loop for the transport case:
 \lstinputlisting[language=matlab,caption={Code for solving the two dimesional transport equation.},label=lst:expWave,captionpos=b]{code/transportFor.tex}
 
 
-\chapter{Analysis}
+\section{Analysis}
+
+
+
+
 
 \section{Exact Solution of Transport Equation}
 As a solution for the transport equation of form
@@ -110,7 +94,7 @@ The truncation error for the upwind scheme with $a=1$ can be found to be
 \begin{equation}
 T_j^n = -\frac{1}{2}(1-\nu)\Delta x u_{xx} + ...
 \end{equation}
-Which is forst order in $\Delta x$, and therefor, under constant $\nu$, also first order in $\Delta t$.
+Which is first order in $\Delta x$, and therefore, under constant $\nu$, also first order in $\Delta t$.
 
 We then now that the maximum error $E^n$ at a point in time $n$ is bound by a function of the same order. And this is what we see in figure \ref{errororrrTransport}
 
