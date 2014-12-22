@@ -1,10 +1,9 @@
 clear all;
 %compute the error of the 2d heat equation in 2d.
 
+tend = 0.1
 mu = 0.25;
-%mu = dx/dt;
 
-tend = 1;
 J = 30;
 
 %x in [0,1].
@@ -13,6 +12,8 @@ dx = 1/J;
 dy = 1/J;
 % mu = dt/dx^2;
 dt = mu*dx^2
+
+%keep h/k constant.
 
 steps = ceil(tend/dt)
 

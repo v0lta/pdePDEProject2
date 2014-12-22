@@ -2,7 +2,7 @@ clear all;
 %This script attempts to find the solution of the heat equation in two
 %dimensons.
 
-tend = 1;
+tend = 10;
 dt = 0.0001;
 J = 30;
 
@@ -33,8 +33,8 @@ for t = 1:(tend/dt)
     end
     Unew = (1 - 4*mu) .* U + U1 + U2;
     U = Unew;
-    %surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
-    %M(t)= getframe;
+    surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
+    M(t)= getframe;
 end
 
 surf(x,y,U);

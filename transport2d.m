@@ -3,8 +3,8 @@ clear all;
 %This script attemts to find the solution of the transport equation in two
 %dimensions.
 
-tend = 0.007;
-dt = 0.0001; %0.01
+tend = 5;
+dt = 0.01; %0.01
 J = 30; %30
 
 %x in [0,1].
@@ -22,6 +22,7 @@ U = sin(pi*x).*sin(pi*y);
 U1 = zeros(J);
 U2 = zeros(J);
 
+figure('Renderer','zbuffer');
 for t = 1:(tend/dt)
     elements = 2:J-1;  
     for i = 1:1:J
@@ -32,13 +33,13 @@ for t = 1:(tend/dt)
     end
     Unew = (1 - 2*mu) .* U + U1 + U2;
     U = Unew;
-    %surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
-    %view(180+45,30)
-    %M(t)= getframe;
+    surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
+    view(180+45,30)
+    M(t)= getframe;
 end
 
 %movie(M);
 %movie2avi(M,'transport2.avi','quality',100)
-surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
-view(180+45,30)
+%surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
+%view(180+45,30)
     

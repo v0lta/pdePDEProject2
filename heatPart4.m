@@ -6,7 +6,7 @@ clear all;
 mu = 0.1;
 %mu = dx/dt;
 
-tend = 0.001;
+tend = 0.2;
 J = 50;
 
 %x in [0,1].
@@ -37,7 +37,7 @@ U2 = zeros(J);
 U = 15*(x - x.^2).*(y-y.^2).*exp(-50 .*((x - 0.5).^2 + (y - 0.5).^2 ));
 
 %time loop
-figure('Renderer','zbuffer');
+%figure('Renderer','zbuffer');
 for t = 1:(tend/dt)
     elements = 2:J-1;  
     for i = 1:1:J
@@ -48,9 +48,11 @@ for t = 1:(tend/dt)
     end
     Unew = (1 - 4*mu) .* U + U1 + U2;
     U = Unew;
-    surf(x,y,U); 
-    axis([0 1 0 1 -1 1]);
-    M(t)= getframe;
+    %surf(x,y,U); 
+    %axis([0 1 0 1 -1 1]);
+    %M(t)= getframe;
 end
 
-
+surf(x,y,U); 
+axis([0 1 0 1 -1 1]);
+    

@@ -2,8 +2,8 @@ clear all;
 %This script attemts to find the solution of the wave equation in two
 %dimensions.
 
-tend = 0.1;
-dt = 0.00033;
+tend = 10;
+dt = 0.01;
 J = 40;
 
 %x in [0,1].
@@ -23,7 +23,7 @@ U2 = zeros(J);
 U = sin(pi*x).*sin(pi*y); 
 
 Uold = U;
-%figure('Renderer','zbuffer');
+figure('Renderer','zbuffer');
 for t = 1:(tend/dt)
     elements = 2:J-1;  
     for i = 1:1:J
@@ -35,8 +35,8 @@ for t = 1:(tend/dt)
     Unew = (2 - 4*mu) .* U - Uold + U1 + U2;
     Uold = U;
     U = Unew;
-    %surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
-    %M(t)= getframe;
+    surf(x,y,U); axis([0 1 0 1 -1 1 -1 1]);
+    M(t)= getframe;
 end
 
 %movie(M);
