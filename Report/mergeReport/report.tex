@@ -10,7 +10,7 @@ We will begin with the numerical solution of the heat equation:
 \begin{equation}
 \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}.
 \end{equation}
-From the lecture we know that this problem may be solved by extension of the one dimensional explicit scheme:
+From the lecture we know that this problem may be solved by extension of the one dimensional explicit scheme. After expansion we get:
 \begin{equation}
 \frac{U^{n+1}-U^{n}}{\triangle t} = b [\frac{\delta_x^2 U^n}{(\triangle x)^2} + \frac{\delta_y^2 U^n}{(\triangle y)^2} ].
 \end{equation}
@@ -19,7 +19,7 @@ with b = 1 in our case. By expanding the central differences we arrive at:
 U_{r,x}^{n+1} = U_{r,s}^n (1 - 2\mu_x - 2\mu_y) + \mu_x U_{r+1,s}^n + \mu_x U_{r-1,s}^n + \mu_y U_{r,s+1}^n + \mu_y U_{r,s-1}^n.
 \label{eq:heat}
 \end{equation}
-Equation~\ref{eq:heat} my be implemented in matlab. With $\mu_x = \frac{\triangle t}{(\triangle x)^2}$ and $\mu_y = \frac{\triangle t}{(\triangle y)^2}$. As we are using a symmetric grid we have $\mu_x = \mu_y$ which leads to the implementation in listing~\ref{lst:expHeat}: 
+Equation~\ref{eq:heat} may be implemented in matlab. With $\mu_x = \frac{\triangle t}{(\triangle x)^2}$ and $\mu_y = \frac{\triangle t}{(\triangle y)^2}$. As we are using a symmetric grid we have $\mu_x = \mu_y$ which leads to the implementation in listing~\ref{lst:expHeat}: 
 \lstinputlisting[language=matlab,caption={Explicit solution of the heat equation in two dimensions.},label=lst:expHeat,captionpos=b]{code/heat2d.tex}
 
 \subsection{Wave equation}
@@ -68,7 +68,7 @@ In order to obtain stable solutions in two dimensions we have to satisfy the con
 \begin{equation}
 \mu_x + \mu_y \leq 0.5
 \end{equation}
-For equally spaced with $\mu_x = \mu_y = \mu$ grids we get:
+For equally spaced grids with $\mu_x = \mu_y = \mu$ we get:
 \begin{equation}
 \mu \leq 0.25
 \end{equation}
