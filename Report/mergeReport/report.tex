@@ -132,6 +132,34 @@ T(x,t) = \frac{1}{2} u_{tt} \triangle t - \frac{1}{12} u_{xxxx} - \frac{1}{12} u
 Which is of first order. In figure~\ref{error:Heat} the error of the heat equation with constant grid ratio at time $t = 0.1$ is shown with logarithmic scaling. We observe first order convergence to the exact result in the plot for decreasing step sizes.
 
 \subsection{Error analysis of our scheme the wave equation}
+We find the truncation error of the wave equation by filling in the true equation in the difference scheme:
+
+\begin{align*}
+T_{r,s}^n = u_{r,s}^{n+1} - u_{r,s}(2 - 2\mu_x - 2 \mu_y) + u_{r,s}^{n-1} \\
+				 - \mu_x u_{r-1,s}^n - \mu_x u_{r+1,s}^n	  \\
+				 - \mu_y u_{r,s-1}^n - \mu_y u_{r,s+1}^n.
+\end{align*}
+
+And expanding them all around $u_{r,s}^n$ till second order. For clarity we now call $u_{r,s}^n$ by $u$.
+
+\begin{align*}
+T_{r,s}^n = u +  \Delta t u_t + \frac{1}{2} u_{tt} \Delta t^2 - u(2 - 2\mu_x - 2 \mu_y) \\
+				u +  \Delta t u_t - \frac{1}{2} u_{tt} \Delta t^2  \\
+				 - \mu_x \left[{ u - u_x \Delta x + \frac{1}{2} u_{xx} \Delta x^2 }\right]	  \\
+				 - \mu_x \left[{ u + u_x \Delta x + \frac{1}{2} u_{xx} \Delta x^2 }\right]	  \\
+				 - \mu_y \left[{ u - u_y \Delta y + \frac{1}{2} u_{yy} \Delta y^2 }\right]	  \\
+				 - \mu_y \left[{ u + u_y \Delta y + \frac{1}{2} u_{yy} \Delta y^2 }\right]	  \\
+				 + \mathcal{O}(\Delta t^3) + \mathcal{O}(\Delta x^3) + \mathcal{O}(\Delta y^3)
+\end{align*}
+ Which beautifully collapses to
+ \begin{align*}
+T_{r,s}^n = u_{tt} \Delta t ^2 - u_{xx}\Delta x ^2 - u_{yy} \Delta y^2   \\
+				 + \mathcal{O}(\Delta t^3) + \mathcal{O}(\Delta x^3) + \mathcal{O}(\Delta y^3)
+\end{align*}
+
+
+
+
 \begin{figure}
 \input{images/errorWave.tex}
 \caption{The error magnitude of the wave equation with constant $\mu = \frac{(\triangle t)^2}{(\triangle x)^2} = 0.2$. At time $t = 0.1$.}
