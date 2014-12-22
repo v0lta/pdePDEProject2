@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.12)  22 DEC 2014 19:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.12)  22 DEC 2014 19:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -848,7 +848,11 @@ File: lstlang3.sty 2014/03/04 1.5c listings language file
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 ))
-(./report.aux)
+(./report.aux
+
+LaTeX Warning: Label `lst:expWave' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -867,8 +871,7 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
-
-(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count152
 \scratchdimen=\dimen206
@@ -926,12 +929,6 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count159
-
-LaTeX Warning: Reference `eq:heat' on page 1 undefined on input line 22.
-
-
-LaTeX Warning: Reference `lst:expHeat' on page 1 undefined on input line 22.
-
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
@@ -940,49 +937,42 @@ nput line 23.
 
 (./code/heat2d.tex [1
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
-
-LaTeX Warning: Reference `lst:expHeat' on page 2 undefined on input line 36.
-
-(./code/waveFor.tex) [2] (./code/transportFor.tex)
-
-LaTeX Warning: Reference `fig:stableUnstable' on page 3 undefined on input line
- 56.
-
-<images/heat.png, id=73, 433.62pt x 321.03094pt>
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./cod
+e/waveFor.tex) [2] (./code/transportFor.tex)
+<images/heat.png, id=130, 433.62pt x 321.03094pt>
 File: images/heat.png Graphic file (type png)
  <use images/heat.png>
 Package pdftex.def Info: images/heat.png used on input line 58.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/wave.png, id=74, 433.62pt x 321.03094pt>
+<images/wave.png, id=131, 433.62pt x 321.03094pt>
 File: images/wave.png Graphic file (type png)
  <use images/wave.png>
 Package pdftex.def Info: images/wave.png used on input line 59.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/transport.png, id=75, 433.62pt x 321.03094pt>
+<images/transport.png, id=132, 433.62pt x 321.03094pt>
 File: images/transport.png Graphic file (type png)
 
 <use images/transport.png>
 Package pdftex.def Info: images/transport.png used on input line 60.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/heatUnstable.png, id=76, 433.62pt x 321.03094pt>
+<images/heatUnstable.png, id=133, 433.62pt x 321.03094pt>
 File: images/heatUnstable.png Graphic file (type png)
 
 <use images/heatUnstable.png>
 Package pdftex.def Info: images/heatUnstable.png used on input line 61.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/waveUnstable.png, id=77, 433.62pt x 321.03094pt>
+<images/waveUnstable.png, id=134, 433.62pt x 321.03094pt>
 File: images/waveUnstable.png Graphic file (type png)
 
 <use images/waveUnstable.png>
 Package pdftex.def Info: images/waveUnstable.png used on input line 62.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/transportUnstable.png, id=78, 433.62pt x 321.03094pt>
+<images/transportUnstable.png, id=135, 433.62pt x 321.03094pt>
 File: images/transportUnstable.png Graphic file (type png)
 
 <use images/transportUnstable.png>
@@ -993,69 +983,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--64
 [][] [] []
  []
 
-
-LaTeX Warning: Reference `fig:stableUnstable' on page 3 undefined on input line
- 75.
-
-
-LaTeX Warning: Reference `fig:stableUnstable' on page 3 undefined on input line
- 75.
-
 [3] [4 <./images/heat.png (PNG copy)> <./images/wave.png (PNG copy)> <./images/
 transport.png (PNG copy)> <./images/heatUnstable.png (PNG copy)> <./images/wave
 Unstable.png (PNG copy)> <./images/transportUnstable.png (PNG copy)>]
-(./images/errorHeat.tex)
-
-LaTeX Warning: Reference `error:Heat' on page 5 undefined on input line 132.
-
-(./images/errorWave.tex) [5]
-
-LaTeX Warning: Reference `error:Wave' on page 6 undefined on input line 140.
-
-
-LaTeX Warning: Reference `errororrrTransport' on page 6 undefined on input line
- 152.
-
-(./images/errorTransport.tex)
-
-LaTeX Warning: Reference `fig:part4' on page 6 undefined on input line 169.
-
-[6] <images/heatP4T01.png, id=137, 433.62pt x 321.03094pt>
+(./images/errorHeat.tex) (./images/errorWave.tex) [5]
+(./images/errorTransport.tex) [6]
+<images/heatP4T01.png, id=189, 433.62pt x 321.03094pt>
 File: images/heatP4T01.png Graphic file (type png)
 
 <use images/heatP4T01.png>
 Package pdftex.def Info: images/heatP4T01.png used on input line 172.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/waveP4T01.png, id=138, 433.62pt x 321.03094pt>
+<images/waveP4T01.png, id=190, 433.62pt x 321.03094pt>
 File: images/waveP4T01.png Graphic file (type png)
 
 <use images/waveP4T01.png>
 Package pdftex.def Info: images/waveP4T01.png used on input line 173.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/transpP4T01.png, id=139, 433.62pt x 321.03094pt>
+<images/transpP4T01.png, id=191, 433.62pt x 321.03094pt>
 File: images/transpP4T01.png Graphic file (type png)
 
 <use images/transpP4T01.png>
 Package pdftex.def Info: images/transpP4T01.png used on input line 174.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/heatP4T02.png, id=140, 433.62pt x 321.03094pt>
+<images/heatP4T02.png, id=192, 433.62pt x 321.03094pt>
 File: images/heatP4T02.png Graphic file (type png)
 
 <use images/heatP4T02.png>
 Package pdftex.def Info: images/heatP4T02.png used on input line 175.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/waveP4T02.png, id=141, 433.62pt x 321.03094pt>
+<images/waveP4T02.png, id=193, 433.62pt x 321.03094pt>
 File: images/waveP4T02.png Graphic file (type png)
 
 <use images/waveP4T02.png>
 Package pdftex.def Info: images/waveP4T02.png used on input line 176.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/transpP4T02.png, id=142, 433.62pt x 321.03094pt>
+<images/transpP4T02.png, id=194, 433.62pt x 321.03094pt>
 File: images/transpP4T02.png Graphic file (type png)
 
 <use images/transpP4T02.png>
@@ -1076,28 +1044,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
 (./report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 910835433F4DA2C96F3CEDFAE8DC3D17;1057.
 
 
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  910835433F4DA2C96F3CEDFAE8DC3D17;1057.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
  ) 
 Here is how much of TeX's memory you used:
- 29726 strings out of 493117
- 677895 string characters out of 6135432
- 976705 words of memory out of 5000000
- 32538 multiletter control sequences out of 15000+600000
+ 29741 strings out of 493117
+ 678126 string characters out of 6135432
+ 977565 words of memory out of 5000000
+ 32553 multiletter control sequences out of 15000+600000
  10965 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,11n,122p,1124b,2380s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1114,10 +1073,10 @@ ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 014/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on report.pdf (8 pages, 917846 bytes).
+Output written on report.pdf (8 pages, 918830 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
+ 274 PDF objects out of 1000 (max. 8388607)
+ 236 compressed objects within 3 object streams
  97 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 
