@@ -120,9 +120,24 @@ u(x,y,t)=u_0(x+t,y+t)
 \end{equation}
 
 \subsection{Error analysis of our scheme for the heat equation}
-TODO...
+\begin{figure}
+\input{images/errorHeat.tex}
+\caption{The error magnitude of the heat equation with constant $\mu = \frac{\triangle t}{(\triangle x)^2} = 0.2$. At time $t = 0.1$.}
+\label{error:Heat}
+\end{figure}
+Analog to its one dimensional counterpart we find the two dimensional heat equation truncation error to be:
+\begin{equation}
+T(x,t) = \frac{1}{2} u_{tt} \triangle t - \frac{1}{12} u_{xxxx} - \frac{1}{12} u_{yyyy} + \dots
+\end{equation}
+Which is of first order. In figure~\ref{error:Heat} the error of the heat equation with constant grid ratio at time $t = 0.1$ is shown with logarithmic scaling. We observe first order convergence to the exact result in the plot for decreasing step sizes.
+
 \subsection{Error analysis of our scheme the wave equation}
-TODO...
+\begin{figure}
+\input{images/errorWave.tex}
+\caption{The error magnitude of the wave equation with constant $\mu = \frac{(\triangle t)^2}{(\triangle x)^2} = 0.2$. At time $t = 0.1$.}
+\label{error:Wave}
+\end{figure}
+Figure~\ref{error:Wave} shows the magnitude of the error for different steps sizes. Again with logarithmic scaling. We observe that the solution of the scheme converges to the exact solution for smaller step sizes.
 
 
 \subsubsection{Error analysis of the transport problem}
@@ -138,8 +153,8 @@ We then now that the maximum error $E^n$ at a point in time $n$ is bound by a fu
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[scale=0.3]{images/errororrrTransport} 
-   \caption{The maximum error at time = 0.1 in function of the tilmestep at a constant $\nu$ of 0.3 }
+   \input{images/errorTransport} 
+   \caption{The maximum error at time = 0.1 in function of the time-step at a constant $\mu = \frac{\triangle t}{\triangle x}$ of 0.2}
    \label{errororrrTransport}
 \end{figure}
 
