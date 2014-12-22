@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.12)  22 DEC 2014 18:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.12)  22 DEC 2014 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -567,17 +567,90 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/standalone/standalone.sty
+Package: standalone 2012/09/15 v1.1b Package to include TeX sub-files with prea
+mbles
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/05/09 v2.6d package option processing (HA)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks33
+\XKV@tempa@toks=\toks34
+\XKV@depth=\count130
+File: xkeyval.tex 2014/05/09 v2.6d key=value parser (HA)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/currfile/currfile.sty
+Package: currfile 2013/02/01 v0.7b Provides the file path elements of the curre
+nt input file
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/filehook/filehook.sty
+Package: filehook 2011/10/12 v0.5d Hooks for input files
+)
+\c@currfiledepth=\count131
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/gincltex/gincltex.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/svn-prov/svn-prov.sty
+Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
+)
+Package: gincltex 2011/09/04 v0.3 Include external LaTeX files like graphics
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box40
+)
+\tc@llx=\dimen171
+\tc@lly=\dimen172
+\tc@urx=\dimen173
+\tc@ury=\dimen174
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen175
+\adjbox@Height=\dimen176
+\adjbox@Depth=\dimen177
+\adjbox@Totalheight=\dimen178
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count132
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box41
+\sift@deathcycles=\count133
+\@vwid@loff=\dimen179
+\@vwid@roff=\dimen180
+))
+\gincltex@box=\box42
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/filemod/filemod-expmin.sty
+Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
+ (expandable; minimal)
+))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2014/02/28 v1.10 Data Visualization (1.10-2-gb39fe75)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks33
-\t@pgfplots@tokb=\toks34
-\t@pgfplots@tokc=\toks35
-\pgfplots@tmpa=\dimen171
-\c@pgfplots@coordindex=\count130
-\c@pgfplots@scanlineindex=\count131
+\t@pgfplots@toka=\toks35
+\t@pgfplots@tokb=\toks36
+\t@pgfplots@tokc=\toks37
+\pgfplots@tmpa=\dimen181
+\c@pgfplots@coordindex=\count134
+\c@pgfplots@scanlineindex=\count135
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
 .code.tex))
@@ -595,14 +668,14 @@ liststructure.code.tex)
 liststructureext.code.tex)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 array.code.tex
-\c@pgfplotsarray@tmp=\count132
+\c@pgfplotsarray@tmp=\count136
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 matrix.code.tex)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
 shared.code.tex
-\c@pgfplotstable@counta=\count133
-\t@pgfplotstable@a=\toks36
+\c@pgfplotstable@counta=\count137
+\t@pgfplotstable@a=\toks38
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 deque.code.tex)
@@ -614,7 +687,7 @@ ta.code.tex))
 .code.tex)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
 s.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count134
+\c@pgfplotslibrarysurf@no=\count138
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
 .surfshading.pgfsys-pdftex.def)))
@@ -644,16 +717,16 @@ x)
 s/tikzlibrarydecorations.code.tex
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen172
-\pgfdecoratedremainingdistance=\dimen173
-\pgfdecoratedinputsegmentcompleteddistance=\dimen174
-\pgfdecoratedinputsegmentremainingdistance=\dimen175
-\pgf@decorate@distancetomove=\dimen176
-\pgf@decorate@repeatstate=\count135
-\pgfdecorationsegmentamplitude=\dimen177
-\pgfdecorationsegmentlength=\dimen178
+\pgfdecoratedcompleteddistance=\dimen182
+\pgfdecoratedremainingdistance=\dimen183
+\pgfdecoratedinputsegmentcompleteddistance=\dimen184
+\pgfdecoratedinputsegmentremainingdistance=\dimen185
+\pgf@decorate@distancetomove=\dimen186
+\pgf@decorate@repeatstate=\count139
+\pgfdecorationsegmentamplitude=\dimen187
+\pgfdecorationsegmentlength=\dimen188
 )
-\tikz@lib@dec@box=\box40
+\tikz@lib@dec@box=\box43
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.pathmorphing.code.tex
@@ -663,13 +736,13 @@ brarydecorations.pathmorphing.code.tex))
 s/tikzlibrarydecorations.pathreplacing.code.tex
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count136
-\pgfplots@xmin@reg=\dimen179
-\pgfplots@xmax@reg=\dimen180
-\pgfplots@ymin@reg=\dimen181
-\pgfplots@ymax@reg=\dimen182
-\pgfplots@zmin@reg=\dimen183
-\pgfplots@zmax@reg=\dimen184
+\pgfplots@numplots=\count140
+\pgfplots@xmin@reg=\dimen189
+\pgfplots@xmax@reg=\dimen190
+\pgfplots@ymin@reg=\dimen191
+\pgfplots@ymax@reg=\dimen192
+\pgfplots@zmin@reg=\dimen193
+\pgfplots@zmax@reg=\dimen194
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryplotmarks.code.tex
@@ -692,8 +765,8 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 ))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/metalogo/metalogo.sty
 Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
-\xl@everylogo=\toks37
-\xl@@everylogo=\toks38
+\xl@everylogo=\toks39
+\xl@@everylogo=\toks40
 LaTeX Info: Redefining \TeX on input line 193.
 LaTeX Info: Redefining \LaTeX on input line 202.
 LaTeX Info: Redefining \LaTeXe on input line 219.
@@ -704,41 +777,41 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen185
-\captionmargin@=\dimen186
-\captionwidth=\dimen187
-\caption@tempdima=\dimen188
-\caption@indent=\dimen189
-\caption@parindent=\dimen190
-\caption@hangindent=\dimen191
+\captionmargin=\dimen195
+\captionmargin@=\dimen196
+\captionwidth=\dimen197
+\caption@tempdima=\dimen198
+\caption@indent=\dimen199
+\caption@parindent=\dimen200
+\caption@hangindent=\dimen201
 )
-\c@ContinuedFloat=\count137
+\c@ContinuedFloat=\count141
 Package caption Info: hyperref package is loaded.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
-\c@subfigure=\count138
-\c@subtable=\count139
+\c@subfigure=\count142
+\c@subtable=\count143
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count140
-\lst@gtempboxa=\box41
-\lst@token=\toks39
-\lst@length=\count141
-\lst@currlwidth=\dimen192
-\lst@column=\count142
-\lst@pos=\count143
-\lst@lostspace=\dimen193
-\lst@width=\dimen194
-\lst@newlines=\count144
-\lst@lineno=\count145
-\lst@maxwidth=\dimen195
+\lst@mode=\count144
+\lst@gtempboxa=\box44
+\lst@token=\toks41
+\lst@length=\count145
+\lst@currlwidth=\dimen202
+\lst@column=\count146
+\lst@pos=\count147
+\lst@lostspace=\dimen203
+\lst@width=\dimen204
+\lst@newlines=\count148
+\lst@lineno=\count149
+\lst@maxwidth=\dimen205
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
-\c@lstnumber=\count146
-\lst@skipnumbers=\count147
-\lst@framebox=\box42
+\c@lstnumber=\count150
+\lst@skipnumbers=\count151
+\lst@framebox=\box45
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2014/03/04 1.5c listings configuration
@@ -775,7 +848,7 @@ File: lstlang3.sty 2014/03/04 1.5c listings language file
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 ))
-No file report.aux.
+(./report.aux)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -794,19 +867,20 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
+
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count148
-\scratchdimen=\dimen196
-\scratchbox=\box43
-\nofMPsegments=\count149
-\nofMParguments=\count150
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count151
-\MPscratchDim=\dimen197
-\MPnumerator=\count152
-\makeMPintoPDFobject=\count153
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count152
+\scratchdimen=\dimen206
+\scratchbox=\box46
+\nofMPsegments=\count153
+\nofMParguments=\count154
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count155
+\MPscratchDim=\dimen207
+\MPnumerator=\count156
+\makeMPintoPDFobject=\count157
+\everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -822,7 +896,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box44
+\AtBeginShipoutBox=\box47
 Package hyperref Info: Link coloring OFF on input line 3.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -831,16 +905,17 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count154
+\c@section@level=\count158
 )
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
 LaTeX Info: Redefining \nameref on input line 3.
+
+(./report.out) (./report.out)
 \@outlinefile=\write5
 \openout5 = `report.out'.
 
-
-ABD: EveryShipout initializing macros
+ ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.10} into 
@@ -850,7 +925,7 @@ your preamble.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count155
+\c@lstlisting=\count159
 
 LaTeX Warning: Reference `eq:heat' on page 1 undefined on input line 22.
 
@@ -929,74 +1004,78 @@ LaTeX Warning: Reference `fig:stableUnstable' on page 3 undefined on input line
 [3] [4 <./images/heat.png (PNG copy)> <./images/wave.png (PNG copy)> <./images/
 transport.png (PNG copy)> <./images/heatUnstable.png (PNG copy)> <./images/wave
 Unstable.png (PNG copy)> <./images/transportUnstable.png (PNG copy)>]
+(./images/errorHeat.tex)
 
-LaTeX Warning: Reference `errororrrTransport' on page 5 undefined on input line
- 137.
+LaTeX Warning: Reference `error:Heat' on page 5 undefined on input line 132.
 
-<images/errororrrTransport.png, id=113, 786.94pt x 476.78125pt>
-File: images/errororrrTransport.png Graphic file (type png)
+(./images/errorWave.tex) [5]
 
-<use images/errororrrTransport.png>
-Package pdftex.def Info: images/errororrrTransport.png used on input line 141.
-(pdftex.def)             Requested size: 236.08382pt x 143.03548pt.
- [5 <./images/errororrrTransport.png (PNG copy)>]
+LaTeX Warning: Reference `error:Wave' on page 6 undefined on input line 140.
 
-LaTeX Warning: Reference `fig:part4' on page 6 undefined on input line 154.
 
-<images/heatP4T01.png, id=129, 433.62pt x 321.03094pt>
+LaTeX Warning: Reference `errororrrTransport' on page 6 undefined on input line
+ 152.
+
+(./images/errorTransport.tex)
+
+LaTeX Warning: Reference `fig:part4' on page 6 undefined on input line 169.
+
+[6] <images/heatP4T01.png, id=137, 433.62pt x 321.03094pt>
 File: images/heatP4T01.png Graphic file (type png)
 
 <use images/heatP4T01.png>
-Package pdftex.def Info: images/heatP4T01.png used on input line 157.
+Package pdftex.def Info: images/heatP4T01.png used on input line 172.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/waveP4T01.png, id=130, 433.62pt x 321.03094pt>
+<images/waveP4T01.png, id=138, 433.62pt x 321.03094pt>
 File: images/waveP4T01.png Graphic file (type png)
 
 <use images/waveP4T01.png>
-Package pdftex.def Info: images/waveP4T01.png used on input line 158.
+Package pdftex.def Info: images/waveP4T01.png used on input line 173.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/transpP4T01.png, id=131, 433.62pt x 321.03094pt>
+<images/transpP4T01.png, id=139, 433.62pt x 321.03094pt>
 File: images/transpP4T01.png Graphic file (type png)
 
 <use images/transpP4T01.png>
-Package pdftex.def Info: images/transpP4T01.png used on input line 159.
+Package pdftex.def Info: images/transpP4T01.png used on input line 174.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/heatP4T02.png, id=132, 433.62pt x 321.03094pt>
+<images/heatP4T02.png, id=140, 433.62pt x 321.03094pt>
 File: images/heatP4T02.png Graphic file (type png)
 
 <use images/heatP4T02.png>
-Package pdftex.def Info: images/heatP4T02.png used on input line 160.
+Package pdftex.def Info: images/heatP4T02.png used on input line 175.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/waveP4T02.png, id=133, 433.62pt x 321.03094pt>
+<images/waveP4T02.png, id=141, 433.62pt x 321.03094pt>
 File: images/waveP4T02.png Graphic file (type png)
 
 <use images/waveP4T02.png>
-Package pdftex.def Info: images/waveP4T02.png used on input line 161.
+Package pdftex.def Info: images/waveP4T02.png used on input line 176.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-<images/transpP4T02.png, id=134, 433.62pt x 321.03094pt>
+<images/transpP4T02.png, id=142, 433.62pt x 321.03094pt>
 File: images/transpP4T02.png Graphic file (type png)
 
 <use images/transpP4T02.png>
-Package pdftex.def Info: images/transpP4T02.png used on input line 162.
+Package pdftex.def Info: images/transpP4T02.png used on input line 177.
 (pdftex.def)             Requested size: 143.09503pt x 105.94054pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--163
+Underfull \hbox (badness 10000) in paragraph at lines 172--178
 [][] [] []
  []
 
-[6 <./images/heatP4T01.png (PNG copy)> <./images/waveP4T01.png (PNG copy)> <./i
-mages/transpP4T01.png (PNG copy)> <./images/heatP4T02.png (PNG copy)> <./images
-/waveP4T02.png (PNG copy)> <./images/transpP4T02.png (PNG copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
- (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
+ [8 <./images/heatP4T01.png (PNG copy)> <./images/waveP4T01.png (PNG copy)> <./
+images/transpP4T01.png (PNG copy)> <./images/heatP4T02.png (PNG copy)> <./image
+s/waveP4T02.png (PNG copy)> <./images/transpP4T02.png (PNG copy)>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
+
+(./report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
 
 
 Package rerunfilecheck Warning: File `report.out' has changed.
@@ -1004,7 +1083,7 @@ Package rerunfilecheck Warning: File `report.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
 (rerunfilecheck)             After:  910835433F4DA2C96F3CEDFAE8DC3D17;1057.
 
 LaTeX Warning: There were undefined references.
@@ -1012,16 +1091,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
  ) 
 Here is how much of TeX's memory you used:
- 28095 strings out of 493117
- 641811 string characters out of 6135432
- 941813 words of memory out of 5000000
- 30982 multiletter control sequences out of 15000+600000
+ 29726 strings out of 493117
+ 677895 string characters out of 6135432
+ 976705 words of memory out of 5000000
+ 32538 multiletter control sequences out of 15000+600000
  10965 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,76p,1124b,2334s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,11n,122p,1124b,2380s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
@@ -1035,10 +1114,10 @@ ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 014/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on report.pdf (6 pages, 922379 bytes).
+Output written on report.pdf (8 pages, 917846 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 92 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 97 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
