@@ -31,7 +31,7 @@ Approximating the second derivatives with central differences and solving for $U
 \begin{align*}
 U_{r,s}^{n+1} = U_{r,s}(2 - 2\mu_x - 2 \mu_y) - U_{r,s}^{n-1} \\
 				 + \mu_x U_{r-1,s}^n + \mu_x U_{r+1,s}^n	  \\
-				 + \mu_y U_{r,s-1}^n + \mu_y U_{r,s+1}.
+				 + \mu_y U_{r,s-1}^n + \mu_y U_{r,s+1}^n.
 \end{align*}
 With $\mu_x = \frac{(\triangle t)^2}{(\triangle x)^2} $ and $\mu_y = \frac{(\triangle t)^2}{(\triangle y)^2} $. In comparison to listing~\ref{lst:expHeat} when listing only changes to the for loop. We got:
 \lstinputlisting[language=matlab,caption={Code for solving the wave equation.},label=lst:expWave,captionpos=b]{code/waveFor.tex}
