@@ -1,0 +1,68 @@
+% This file was created by matlab2tikz v0.4.7 running on MATLAB 8.4.
+% Copyright (c) 2008--2014, Nico Schlömer <nico.schloemer@gmail.com>
+% All rights reserved.
+% Minimal pgfplots version: 1.3
+% 
+% The latest updates can be retrieved from
+%   http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz
+% where you can also make suggestions and rate matlab2tikz.
+% 
+\documentclass[tikz]{standalone}
+\usepackage{pgfplots}
+\usepackage{grffile}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{plotmarks}
+\usepackage{amsmath}
+
+\begin{document}
+%
+% defining custom colors
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.6015625in,
+height=3.58260416666667in,
+scale only axis,
+separate axis lines,
+every outer x axis line/.append style={white!15!black},
+every x tick label/.append style={font=\color{white!15!black}},
+xmode=log,
+xmin=1e-05,
+xmax=0.01,
+xminorticks=true,
+xlabel = {Time step length $\triangle t$.},
+every outer y axis line/.append style={white!15!black},
+every y tick label/.append style={font=\color{white!15!black}},
+ymode=log,
+ymin=0.001,
+ymax=1,
+yminorticks=true,
+ylabel = {Error magnitude}
+]
+\addplot [color=mycolor1,solid,forget plot]
+  table[row sep=crcr]{1e-05	0.00550048416253701\\
+1.43844988828766e-05	0.00426022692592282\\
+2.06913808111479e-05	0.00731954212955521\\
+2.97635144163132e-05	0.00652019808832108\\
+4.2813323987194e-05	0.0107737956436683\\
+6.15848211066027e-05	0.00952104612896937\\
+8.85866790410083e-05	0.0060501491138952\\
+0.000127427498570313	0.00867287204062808\\
+0.000183298071083244	0.0171656651418606\\
+0.000263665089873036	0.0110643744073289\\
+0.000379269019073225	0.0231594351808285\\
+0.000545559478116852	0.032661716498173\\
+0.000784759970351461	0.0329940240902289\\
+0.00112883789168469	0.0528889045532599\\
+0.00162377673918872	0.054069510878676\\
+0.00233572146909012	0.0727746705341522\\
+0.00335981828628378	0.0521149546912724\\
+0.00483293023857175	0.101382888926538\\
+0.00695192796177561	0.122630282132052\\
+0.01	0.0996483866571002\\
+};
+\end{axis}
+\end{tikzpicture}%
+\end{document}

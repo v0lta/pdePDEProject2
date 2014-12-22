@@ -1,0 +1,66 @@
+% This file was created by matlab2tikz v0.4.7 running on MATLAB 8.4.
+% Copyright (c) 2008--2014, Nico Schlömer <nico.schloemer@gmail.com>
+% All rights reserved.
+% Minimal pgfplots version: 1.3
+% 
+% The latest updates can be retrieved from
+%   http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz
+% where you can also make suggestions and rate matlab2tikz.
+% 
+\documentclass[tikz]{standalone}
+\usepackage{pgfplots}
+\usepackage{grffile}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{plotmarks}
+\usepackage{amsmath}
+
+\begin{document}
+%
+% defining custom colors
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.52083333333333in,
+height=3.565625in,
+scale only axis,
+separate axis lines,
+every outer x axis line/.append style={white!15!black},
+every x tick label/.append style={font=\color{white!15!black}},
+xmode=log,
+xmin=0.0001,
+xmax=0.01,
+xminorticks=true,
+every outer y axis line/.append style={white!15!black},
+every y tick label/.append style={font=\color{white!15!black}},
+ymode=log,
+ymin=0.001,
+ymax=0.1,
+yminorticks=true
+]
+\addplot [color=mycolor1,solid,forget plot]
+  table[row sep=crcr]{0.0001	0.00776744335059278\\
+0.000127427498570313	0.00863641952514271\\
+0.000162377673918872	0.00990955930689755\\
+0.000206913808111479	0.0105639822626394\\
+0.000263665089873036	0.0122207619308833\\
+0.000335981828628378	0.0134635689390733\\
+0.00042813323987194	0.0144015326346165\\
+0.000545559478116852	0.0162979710323885\\
+0.000695192796177561	0.0179426446489699\\
+0.000885866790410082	0.0206903741032389\\
+0.00112883789168469	0.0213850388513123\\
+0.00143844988828766	0.0253233913521262\\
+0.00183298071083244	0.0276684791638391\\
+0.00233572146909012	0.030437124584842\\
+0.00297635144163132	0.0294879127892405\\
+0.00379269019073225	0.0417809501003144\\
+0.00483293023857175	0.0434801185746549\\
+0.00615848211066027	0.0516903910993747\\
+0.00784759970351461	0.0438694685958775\\
+0.01	0.0606663630249626\\
+};
+\end{axis}
+\end{tikzpicture}%
+\end{document}
