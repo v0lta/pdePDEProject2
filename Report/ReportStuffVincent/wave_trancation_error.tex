@@ -1,0 +1,35 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{Brief Article}
+\author{The Author}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+We find the truncation error of the wave equation by filling in the true equation in the difference scheme:
+
+\begin{align*}
+T_{r,s}^n = u_{r,s}^{n+1} - u_{r,s}(2 - 2\mu_x - 2 \mu_y) + u_{r,s}^{n-1} \\
+				 - \mu_x u_{r-1,s}^n - \mu_x u_{r+1,s}^n	  \\
+				 - \mu_y u_{r,s-1}^n - \mu_y u_{r,s+1}^n.
+\end{align*}
+
+And expanding them all around $u_{r,s}^n$ till second order. For clarity we now call $u_{r,s}^n$ by $u$.
+
+\begin{align*}
+T_{r,s}^n = u +  - u_{r,s}(2 - 2\mu_x - 2 \mu_y) + u_{r,s}^{n-1} \\
+				 - \mu_x u_{r-1,s}^n - \mu_x u_{r+1,s}^n	  \\
+				 - \mu_y u_{r,s-1}^n - \mu_y u_{r,s+1}^n.
+\end{align*}
+
+
+\end{document}  

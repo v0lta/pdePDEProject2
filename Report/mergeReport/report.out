@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{Implementation of explicit methods}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Heat Equation}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Wave equation}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Transport equation}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Analysis}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Stability}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Accuracy}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Exact Solution of the Heat Equation}{subsection.2.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Exact Solution of the Wave Equation}{subsection.2.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Exact Solution of Transport Equation}{subsection.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Error analysis of our scheme for the heat equation}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.4}{Error analysis of our scheme the wave equation}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Error analysis of the transport problem}{subsection.2.4}% 13
+\BOOKMARK [1][-]{section.3}{Another initial solution}{}% 14
